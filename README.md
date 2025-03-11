@@ -1,4 +1,7 @@
-#OOPs concepts 
+# OOPs concepts 
+
+
+from abc import ABC, abstractmethod  # Importing Abstract Base Class module
 
 # Abstraction: Creating an abstract class
 class Vehicle(ABC):
@@ -8,7 +11,8 @@ class Vehicle(ABC):
 
     @abstractmethod
     def display_info(self):
-       
+        pass  # Abstract method to be implemented by child classes
+
 # Encapsulation: Creating a class with private variables
 class Car(Vehicle):
     def __init__(self, brand, model, engine):
@@ -16,7 +20,7 @@ class Car(Vehicle):
         self.__engine = engine  # Private attribute
 
     def display_info(self):
-        return f"Car: {self.brand} {self._model}, Engine: {self.__engine}"     
+        return f"Car: {self.brand} {self._model}, Engine: {self.__engine}"
 
 # Inheritance: Bike inherits from Vehicle
 class Bike(Vehicle):
